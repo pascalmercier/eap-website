@@ -2,6 +2,8 @@
 
 Website for Ensemble À Plectre de Toulouse (EAP), a musical ensemble based in Toulouse, France.
 
+> **Note:** This website was vibe coded using [Cursor](https://cursor.sh/) based on original Figma designs.
+
 ## Project Structure
 
 ```
