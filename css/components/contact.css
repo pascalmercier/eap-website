@@ -29,9 +29,7 @@
   font-family: var(--font-crimson-text);
   font-size: var(--font-size-sm);
   color: var(--color-link);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
