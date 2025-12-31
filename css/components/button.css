@@ -1,0 +1,96 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  width: auto;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  /* Ensure buttons and links look the same */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.9;
+  outline: none;
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+/* Mobile: Full-width buttons when in vertical stack */
+@media (max-width: 767px) {
+  .hero__actions .btn,
+  .footer__action .btn,
+  .footer__social .btn  {
+    width: 100%;
+  }
+}
+
+/* Primary Button v2 */
+.btn--primary.btn--v2 {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  font-family: var(--font-avenir-next);
+  font-weight: var(--font-weight-medium);
+}
+
+.btn--primary.btn--v2:hover,
+.btn--primary.btn--v2:focus {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+/* Secondary Button v2 */
+.btn--secondary.btn--v2 {
+  background-color: var(--color-beige);
+  color: var(--color-black);
+  font-family: var(--font-avenir-next);
+  font-weight: var(--font-weight-medium);
+}
+
+.btn--secondary.btn--v2:hover,
+.btn--secondary.btn--v2:focus {
+  background-color: var(--color-beige);
+  color: var(--color-black);
+}
+
+/* Primary Button v1 */
+.btn--primary:not(.btn--v2) {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  font-family: var(--font-avenir-next);
+  font-weight: var(--font-weight-bold);
+}
+
+.btn--primary:not(.btn--v2):hover,
+.btn--primary:not(.btn--v2):focus {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+/* Secondary Button v1 */
+.btn--secondary:not(.btn--v2) {
+  background-color: var(--color-beige);
+  color: var(--color-black);
+  font-family: var(--font-avenir-next);
+  font-weight: var(--font-weight-bold);
+}
+
+.btn--secondary:not(.btn--v2):hover,
+.btn--secondary:not(.btn--v2):focus {
+  background-color: var(--color-beige);
+  color: var(--color-black);
+}
+

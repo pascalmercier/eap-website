@@ -1,0 +1,29 @@
+/* Reset and Base Styles */
+@import url('./base/reset.css');
+@import url('./base/variables.css');
+@import url('./base/typography.css');
+
+/* Components */
+@import url('./components/header.css');
+@import url('./components/button.css');
+@import url('./components/hero.css');
+@import url('./components/about.css');
+@import url('./components/concert-item.css');
+@import url('./components/concerts.css');
+@import url('./components/join.css');
+@import url('./components/orchestre.css');
+@import url('./components/contact.css');
+@import url('./components/footer.css');
+
+/* Layout */
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  padding-top: 80px; /* Account for fixed header */
+}
+

@@ -1,0 +1,27 @@
+{
+  "name": "eap-website",
+  "version": "1.0.0",
+  "description": "Website for Ensemble À Plectre de Toulouse",
+  "scripts": {
+    "start": "live-server --port=8000 --open=/index.html",
+    "dev": "live-server --port=8000 --open=/index.html --watch=css,js,data,index.html,orchestre.html"
+  },
+  "keywords": [
+    "website",
+    "orchestra",
+    "music"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

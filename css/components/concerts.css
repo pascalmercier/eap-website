@@ -1,0 +1,101 @@
+.concerts {
+  width: 100%;
+  background-color: var(--color-white);
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.concerts__container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .concerts {
+    align-items: center;
+  }
+}
+
+.concerts__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.concerts__list--past {
+  margin-top: var(--spacing-md);
+}
+
+.concerts__list--past.concerts__list--visible {
+  display: flex !important;
+}
+
+.concerts__past-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.concerts__past-toggle .btn {
+  width: auto;
+}
+
+.concerts__image {
+  width: 100%;
+  aspect-ratio: 393 / 161;
+  position: relative;
+  overflow: hidden;
+}
+
+.concerts__image img {
+  position: absolute;
+  height: 188.01%;
+  left: -0.04%;
+  top: -50.63%;
+  width: 102.7%;
+  object-fit: cover;
+}
+
+.concerts__actions {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  align-items: center;
+  justify-content: center;
+}
+
+.concerts__empty {
+  width: 100%;
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.concerts__empty-message {
+  font-family: var(--font-avenir-next);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  margin: 0;
+}
+
+.concerts__empty-subtitle {
+  font-family: var(--font-crimson-text);
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+  margin: 0;
+  opacity: 0.7;
+}
+

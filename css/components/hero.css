@@ -1,0 +1,83 @@
+.hero {
+  width: 100%;
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden; /* Allow background to overflow gracefully, prevent internal scrolling */
+  background-image: url('../../assets/rosace-background.png');
+  background-repeat: no-repeat;
+  /* Mobile: positioned to overflow to the right */
+  background-position: 25vw 17vh;
+}
+
+.hero__content {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+}
+
+.hero__title {
+  text-align: center;
+  width: 100%;
+}
+
+.hero__subtitle {
+  font-family: var(--font-avenir-next);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  text-align: center;
+  width: 100%;
+}
+
+.hero__actions {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Desktop: Center content, larger sizes, different rosace position */
+@media (min-width: 768px) {
+  .hero {
+    align-items: center;
+    /* Desktop: positioned to overflow to the right */
+    background-position: 75vw 6vh;
+  }
+
+  .hero__content {
+    max-width: var(--container-max-width);
+    align-items: flex-start;
+  }
+
+  .hero__text {
+    align-items: flex-start;
+  }
+
+  .hero__title {
+    text-align: center;
+  }
+
+  .hero__subtitle {
+    font-size: var(--font-size-lg);
+    text-align: center;
+  }
+}
+

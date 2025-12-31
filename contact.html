@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Ensemble À Plectre de Toulouse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYE0F1Y0MF"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CYE0F1Y0MF');
+    </script>
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <a href="/"><img src="assets/logo.png" alt="EAP Logo"></a>
+        </div>
+        <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li><a href="/" class="header__nav-link">Accueil</a></li>
+            <li><a href="orchestre.html" class="header__nav-link">À Propos</a></li>
+            <li><a href="contact.html" class="header__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="contact">
+      <div class="contact__container">
+        <a href="/" class="page__back">&lt; Retour</a>
+        
+        <h1 class="section-title contact__title">Contactez-nous</h1>
+        
+        <div class="contact__content">
+          <div class="contact__intro">
+            <div class="body-text contact__description">
+              <p>Vous avez une question, souhaitez rejoindre l'orchestre ou organiser un concert ? N'hésitez pas à nous contacter via le formulaire ci-dessous.</p>
+            </div>
+          </div>
+
+          <!-- 
+            GOOGLE APPS SCRIPT SETUP INSTRUCTIONS:
+            Based on: https://github.com/zfhassaan/contact-form
+            
+            1. Create a Google Spreadsheet (to store form submissions)
+            2. Open the spreadsheet and go to Extensions > Apps Script
+            3. Copy the Google Apps Script code (see setup instructions in README or use the template)
+            4. Set TO_ADDRESS variable in the script to: ensemble@mandolinetoulouse.net
+            5. Deploy the script as a web app:
+               - Click "Deploy" > "New deployment"
+               - Choose type: "Web app"
+               - Execute as: "Me"
+               - Who has access: "Anyone"
+               - Copy the Web app URL
+            6. Replace "YOUR_GOOGLE_SCRIPT_URL" in the form action below with your Web app URL
+          -->
+          <form class="gform contact__form" action="https://script.google.com/macros/s/AKfycbyFQ2qz-pzBUfpieXNhGDM4p4o1Lr3L6t8sKjME87iDfNY41aKbzTZxxhEw-8283j5A/exec" method="POST" data-email="admin@mandolinetoulouse.net">
+            <!-- Honeypot field for spam protection -->
+            <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+            
+            <!-- Form fields wrapper -->
+            <div class="form-elements">
+              <div class="contact__field">
+                <label for="name" class="contact__label">Nom <span class="contact__required">*</span></label>
+                <input type="text" id="name" name="name" class="contact__input" required>
+              </div>
+
+              <div class="contact__field">
+                <label for="email" class="contact__label">Email <span class="contact__required">*</span></label>
+                <input type="email" id="email" name="email" class="contact__input" required>
+                <div class="email-invalid" style="display: none; color: var(--color-red); font-family: var(--font-avenir-next); font-size: var(--font-size-sm); margin-top: var(--spacing-xs);">
+                  Veuillez entrer une adresse email valide.
+                </div>
+              </div>
+
+              <div class="contact__field">
+                <label for="subject" class="contact__label">Sujet <span class="contact__required">*</span></label>
+                <input type="text" id="subject" name="subject" class="contact__input" required>
+              </div>
+
+              <div class="contact__field">
+                <label for="message" class="contact__label">Message <span class="contact__required">*</span></label>
+                <textarea id="message" name="message" class="contact__textarea" rows="6" required></textarea>
+              </div>
+
+              <div class="contact__submit">
+                <button type="submit" class="btn btn--primary btn--v2">Envoyer le message</button>
+              </div>
+            </div>
+
+            <!-- Thank you message (hidden by default) -->
+            <div class="thankyou_message" style="display: none;">
+              <div class="body-text">
+                <p><strong>Merci !</strong></p>
+                <p>Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__actions">
+          <div class="footer__action">
+            <p class="footer__action-title">Aidez-nous à prolonger 140 ans de musique</p>
+            <a href="https://www.helloasso.com/associations/ensemble-a-plectre-de-toulouse/formulaires/1" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--v2">Soutenir l'ensemble</a>
+          </div>
+          <div class="footer__action">
+            <p class="footer__action-title">Apprenez la mandoline</p>
+            <a href="https://fepeb.fr/ecole-de-mandoline/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--v2">Découvrir l'école</a>
+          </div>
+        </div>
+        <div class="footer__info">
+          <div class="footer__contact">
+            <p class="footer__org">EAP</p>
+            <p class="footer__address">
+              Foyer d'Education Populaire Etienne Billières<br>
+              59, rue Vestrepain<br>
+              31100 TOULOUSE
+            </p>
+          </div>
+          <div class="footer__social">
+            <a href="contact.html" class="btn btn--secondary btn--v2">Contactez-nous</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/contact-form.js"></script>
+</body>
+</html>
+

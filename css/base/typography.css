@@ -1,0 +1,105 @@
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-avenir-next);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-black);
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-crimson-text);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-black);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Section Titles (h1, h2) */
+.section-title {
+  font-family: var(--font-avenir-next);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-tight);
+  text-align: center;
+  color: var(--color-black);
+  width: 100%;
+  scroll-margin-top: 100px; /* Account for fixed header (80px) + extra spacing */
+}
+
+/* Large section title variant (for hero/desktop) */
+.hero__title {
+  font-size: var(--font-size-2xl);
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero__title {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+/* Section Subtitles (h3) */
+.section-subtitle {
+  font-family: var(--font-avenir-next);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-black);
+  padding-bottom: 0.5rem;
+}
+
+/* Body Text */
+.body-text {
+  font-family: var(--font-crimson-text);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-black);
+}
+
+.body-text p {
+  margin-bottom: var(--spacing-xs);
+}
+
+.body-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Small Text */
+.text-sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.text-xs {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Links */
+.link {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--color-link-hover);
+}
+
+/* Bold text within body */
+.body-text strong,
+p strong {
+  font-family: var(--font-crimson-text);
+  font-weight: var(--font-weight-bold);
+}
+
